@@ -11,11 +11,44 @@ Realize each operation in a (tiny) function that receives the value of n as a pa
 
 */
 
-
 #include <stdio.h>
 
-int main(){
+int main()
+{
+  int n = 1;
+  int d = 0;
+  while (1)
+  {
+    printf("0. Restore the initial value (n = 1)\n"
+           "1. Add 1\n"
+           "2. Negate the number (+/-)\n"
+           "3. Multiple by 2\n"
+           "9. Exit\n");
+    scanf("%d", &d);
 
+    if (d == 0)
+    {
+      n = 1;
+    }
+    if (d == 1)
+    {
+      n += 1;
+    }
+    if (d == 2)
+    {
+      n *= -1;
+    }
+    if (d == 3)
+    {
+      n *= 2;
+    }
+    if (d == 9)
+    {
+      return 0;
+    }
+
+    printf("n value is:%d \n", n);
+  }
 
   return 0;
 }
